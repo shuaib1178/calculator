@@ -5,11 +5,50 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Hirdog School System - Professional school management and administration platform." />
+    <meta name="theme-color" content="#054f49" />
     <title>Hirdog School System</title>
+    <style>
+        #initial-loader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #fcfbfd;
+            z-index: 9999;
+            transition: opacity 0.3s ease-out;
+        }
+        .spinner {
+            width: 40px;
+            height: 40px;
+            border: 4px solid #6b7280;
+            border-top: 4px solid #054f49;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
 </head>
 
 <body>
-    <div id="root"></div>
+    <noscript>
+        <div style="padding: 2rem; text-align: center; font-family: sans-serif;">
+            <h1>JavaScript Required</h1>
+            <p>Please enable JavaScript to use the Hirdog School System.</p>
+        </div>
+    </noscript>
+    <div id="root">
+        <div id="initial-loader">
+            <div class="spinner" aria-label="Loading application"></div>
+        </div>
+    </div>
     <script type="module" src="/src/main.jsx"></script>
 </body>
 
