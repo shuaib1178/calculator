@@ -5,11 +5,80 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Hirdog School Management System - Efficiently manage students, teachers, and school operations." />
+    <meta name="theme-color" content="#054f49" />
     <title>Hirdog School System</title>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            background-color: #fcfbfd;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            text-rendering: optimizeLegibility;
+        }
+
+        *:focus-visible {
+            outline: 2px solid #054f49;
+            outline-offset: 2px;
+        }
+        .initial-loader {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            width: 100vw;
+            font-family: system-ui, -apple-system, sans-serif;
+        }
+        .spinner {
+            width: 48px;
+            height: 48px;
+            border: 5px solid #e5e7eb;
+            border-top: 5px solid #054f49;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin-bottom: 1rem;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border-width: 0;
+        }
+        .loading-text {
+            color: #054f49;
+            font-weight: 500;
+        }
+    </style>
 </head>
 
 <body>
-    <div id="root"></div>
+    <div id="root">
+        <div class="initial-loader" aria-live="polite" aria-busy="true">
+            <div class="spinner" role="status"></div>
+            <p class="loading-text">Loading School System...</p>
+            <span class="sr-only">Please wait while the application loads.</span>
+        </div>
+    </div>
+    <noscript>
+        <div style="text-align: center; padding: 2rem; font-family: system-ui, sans-serif;">
+            <h1>JavaScript Required</h1>
+            <p>We're sorry, but the Hirdog School System requires JavaScript to function properly. Please enable it in your browser settings.</p>
+        </div>
+    </noscript>
     <script type="module" src="/src/main.jsx"></script>
 </body>
 
