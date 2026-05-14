@@ -5,11 +5,66 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Hirdog School System - Professional school management and administration platform." />
+    <meta name="theme-color" content="#054f49" />
     <title>Hirdog School System</title>
+    <style>
+        #initial-loader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: #fcfbfd;
+            z-index: 9999;
+        }
+
+        .spinner {
+            width: 48px;
+            height: 48px;
+            border: 5px solid #c0c1c0;
+            border-bottom-color: #054f49;
+            border-radius: 50%;
+            display: inline-block;
+            box-sizing: border-box;
+            animation: rotation 1s linear infinite;
+        }
+
+        @keyframes rotation {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        .loader-text {
+            margin-top: 1rem;
+            color: #054f49;
+            font-family: sans-serif;
+            font-weight: 500;
+        }
+    </style>
 </head>
 
 <body>
-    <div id="root"></div>
+    <noscript>
+        <div style="padding: 2rem; text-align: center; font-family: sans-serif;">
+            <h1>JavaScript Required</h1>
+            <p>Please enable JavaScript to use the Hirdog School System.</p>
+        </div>
+    </noscript>
+    <div id="root">
+        <div id="initial-loader" role="status">
+            <span class="spinner" aria-hidden="true"></span>
+            <span class="loader-text" aria-live="polite">Loading Hirdog School System...</span>
+        </div>
+    </div>
     <script type="module" src="/src/main.jsx"></script>
 </body>
 
