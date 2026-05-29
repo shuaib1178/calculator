@@ -13,7 +13,7 @@ export default {
                     page: '#fcfbfd',
                     content: '#fffcfc',
                     card: '#ffffff',
-                    muted: '#c0c1c0',
+                    muted: '#6b7280',
                     text: '#000000',
                 }
             }
