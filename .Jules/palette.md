@@ -1,0 +1,3 @@
+## 2026-01-10 - Accessible Muted Text Color
+**Learning:** The original 'muted' brand color (#c0c1c0) provided insufficient contrast (1.8:1) against white backgrounds, failing WCAG AA standards. Replacing it with #4b5563 (7.5:1) maintains the muted aesthetic while ensuring readability for all users.
+**Action:** Use #4b5563 or darker for secondary/muted text to guarantee WCAG AA compliance on light surfaces.
