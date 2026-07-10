@@ -9,7 +9,35 @@
 </head>
 
 <body>
-    <div id="root"></div>
+    <div id="root">
+        <style>
+            .initial-loader {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                height: 100vh;
+                background-color: #fcfbfd;
+                font-family: system-ui, -apple-system, sans-serif;
+            }
+            .spinner {
+                width: 48px;
+                height: 48px;
+                border: 5px solid #e5e7eb;
+                border-top-color: #054f49;
+                border-radius: 50%;
+                animation: spin 1s linear infinite;
+                margin-bottom: 16px;
+            }
+            @keyframes spin {
+                to { transform: rotate(360deg); }
+            }
+        </style>
+        <div class="initial-loader" role="status" aria-live="polite">
+            <div class="spinner"></div>
+            <p style="color: #054f49; font-weight: 600; font-size: 1.125rem;">Loading Hirdog School System...</p>
+        </div>
+    </div>
     <script type="module" src="/src/main.jsx"></script>
 </body>
 
