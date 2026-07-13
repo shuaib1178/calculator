@@ -9,7 +9,40 @@
 </head>
 
 <body>
-    <div id="root"></div>
+    <div id="root">
+        <style>
+            .initial-loader-container {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                min-height: 100vh;
+                background-color: #fcfbfd;
+                font-family: sans-serif;
+            }
+            .spinner {
+                width: 48px;
+                height: 48px;
+                border: 4px solid rgba(5, 79, 73, 0.2);
+                border-top-color: #054f49;
+                border-radius: 50%;
+                animation: spin 1s linear infinite;
+                margin-bottom: 16px;
+            }
+            @keyframes spin {
+                to { transform: rotate(360deg); }
+            }
+            .loader-text {
+                color: #054f49;
+                font-weight: 500;
+                font-size: 1.125rem;
+            }
+        </style>
+        <div class="initial-loader-container" role="status" aria-label="Loading Hirdog School System">
+            <div class="spinner"></div>
+            <p class="loader-text">Loading Hirdog School System...</p>
+        </div>
+    </div>
     <script type="module" src="/src/main.jsx"></script>
 </body>
 
