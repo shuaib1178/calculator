@@ -9,7 +9,49 @@
 </head>
 
 <body>
-    <div id="root"></div>
+    <div id="root">
+        <style>
+            .initial-loader {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                width: 100vw;
+                background-color: #fcfbfd;
+                position: fixed;
+                top: 0;
+                left: 0;
+                z-index: 9999;
+            }
+            .spinner {
+                width: 48px;
+                height: 48px;
+                border: 5px solid rgba(5, 79, 73, 0.1);
+                border-top: 5px solid #054f49;
+                border-radius: 50%;
+                animation: spin 1s linear infinite;
+            }
+            @keyframes spin {
+                0% { transform: rotate(0deg); }
+                100% { transform: rotate(360deg); }
+            }
+            .sr-only {
+                position: absolute;
+                width: 1px;
+                height: 1px;
+                padding: 0;
+                margin: -1px;
+                overflow: hidden;
+                clip: rect(0, 0, 0, 0);
+                white-space: nowrap;
+                border-width: 0;
+            }
+        </style>
+        <div class="initial-loader" role="status">
+            <div class="spinner"></div>
+            <span class="sr-only">Loading Hirdog School System...</span>
+        </div>
+    </div>
     <script type="module" src="/src/main.jsx"></script>
 </body>
 
