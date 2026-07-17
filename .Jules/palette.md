@@ -1,0 +1,3 @@
+## 2026-07-17 - Color Contrast and Loader Accessibility
+**Learning:** In the brand's custom design system, the default `brand.muted` color (`#c0c1c0`) provides a contrast ratio of only ~1.93:1 against the page background (`#fcfbfd`), which fails WCAG AA standards. Elevating it to `#4b5563` provides ~7.7:1 contrast. Furthermore, providing an inline CSS loading spinner directly within the index.html `#root` prevents blank screens and improves perceived load time.
+**Action:** Always verify custom palette default configurations against WCAG AA standards early, and ensure critical fallback loading feedback is rendered before bundles are fetched.
