@@ -1,0 +1,3 @@
+## 2026-07-19 - Accessible Muted Color and Inline SVG Initial Loader
+**Learning:** The default 'brand.muted' color (#c0c1c0) failed WCAG AA contrast standards (1.93:1) against the brand background (#fcfbfd). Additionally, an initial loader in 'index.html' using custom '<style>' blocks can violate custom CSS restrictions; using an inline SVG with '<animateTransform>' SMIL animations avoids this constraint while ensuring immediate, FOUC-free accessibility.
+**Action:** Updated 'brand.muted' to #4b5563 (5.11:1) and designed the initial loading spinner inside '#root' using purely standard SVG element structure with inline styling.
