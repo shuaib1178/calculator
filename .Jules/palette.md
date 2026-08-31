@@ -1,0 +1,3 @@
+## 2026-08-31 - Brand Muted Color Contrast & Initial Load Accessibility
+**Learning:** The `brand.muted` color (`#c0c1c0`) provides a contrast ratio of ~1.93:1 against the `#fcfbfd` background, failing WCAG AA requirements (minimum 4.5:1). Updating `brand.muted` to `#4b5563` achieves a ~7.7:1 contrast ratio while keeping design harmony. Additionally, providing an accessible CSS/SVG loading state inside `#root` prevents perceived lag and blank screen flashes during script initialization.
+**Action:** Use `#4b5563` for `brand.muted` text/borders and include an inline ARIA-compliant initial loader inside `#root`.
