@@ -1,0 +1,3 @@
+## 2026-09-11 - Initial Load UX and Accessibility
+**Learning:** Placing an accessible CSS/SMIL SVG initial loading indicator inside the `#root` div in `index.html` prevents Flash of Unstyled Content (FOUC) and blank screen delays before JavaScript bundles load and mount. Using a wrapper div nested inside `#root` rather than applying flexbox styles to `#root` directly prevents layout regressions after React mounts.
+**Action:** When creating initial loaders in single-page React apps, nest a loading container inside `<div id="root">` with inline flex styles, `role="status"`, and SMIL SVG animations.
