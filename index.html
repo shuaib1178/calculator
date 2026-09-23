@@ -8,8 +8,18 @@
     <title>Hirdog School System</title>
 </head>
 
-<body>
-    <div id="root"></div>
+<body style="margin: 0; background-color: #fcfbfd; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
+    <div id="root">
+        <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 100vh; color: #054f49;" role="status" aria-label="Loading application">
+            <svg width="40" height="40" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <circle cx="25" cy="25" r="20" stroke="#054f49" stroke-width="4" stroke-linecap="round" stroke-dasharray="31.415 31.415" opacity="0.25" />
+                <circle cx="25" cy="25" r="20" stroke="#054f49" stroke-width="4" stroke-linecap="round" stroke-dasharray="31.415 31.415" stroke-dashoffset="15">
+                    <animateTransform attributeName="transform" type="rotate" from="0 25 25" to="360 25 25" dur="1s" repeatCount="indefinite" />
+                </circle>
+            </svg>
+            <span style="margin-top: 1rem; font-size: 0.875rem; font-weight: 500; letter-spacing: 0.025em;">Loading...</span>
+        </div>
+    </div>
     <script type="module" src="/src/main.jsx"></script>
 </body>
 
