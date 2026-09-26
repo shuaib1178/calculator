@@ -1,0 +1,3 @@
+## 2026-09-26 - Initial Accessible Loader Pattern
+**Learning:** Adding a lightweight, accessible CSS/SVG loading state inside `<div id="root">` in `index.html` prevents Flash of Unstyled Content (FOUC) and blank screen delays for users on slower connections before JavaScript bundle execution. Using SMIL inline SVG animations avoids requiring custom external CSS files, maintaining WCAG compliance and smooth visual feedback.
+**Action:** Use an inline styled loader container with `role="status"`, `aria-live="polite"`, screen-reader text, and SMIL SVG spinner inside `<div id="root">` for zero-dependency startup feedback.
