@@ -1,0 +1,3 @@
+## 2026-11-03 - Initial Application Mount Loading State
+**Learning:** In single-page applications where root component hydration or bundle loading can cause blank-screen delays, placing a semantic, accessible initial loader (`role="status"`, `aria-live="polite"`) with inline SMIL SVG animation directly inside `#root` prevents jarring content flashes and provides immediate feedback without conflicting with client-side React mounting.
+**Action:** Use an inline-styled wrapper with system fonts and self-contained SMIL SVG spinner inside `<div id="root">` to ensure instant visual stability and a11y announcement during initial load.
